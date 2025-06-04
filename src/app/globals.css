@@ -10,7 +10,8 @@
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 25 95% 53%;
+
+    --primary: 153 71% 45%;
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
@@ -78,7 +79,7 @@
 @layer components {
   /* YC-style buttons */
   .btn-primary {
-    @apply bg-orange-600 hover:bg-orange-700 text-white font-medium px-4 py-2 rounded border border-orange-600 hover:border-orange-700 transition-colors duration-200;
+    @apply bg-green-600 hover:bg-green-700 text-white font-medium px-4 py-2 rounded border border-green-600 hover:border-green-700 transition-colors duration-200;
   }
 
   .btn-secondary {
@@ -100,7 +101,7 @@
 
   /* Input styles */
   .input-simple {
-    @apply bg-white border border-gray-300 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-gray-900 placeholder-gray-500 rounded px-3 py-2;
+    @apply bg-white border border-gray-300 focus:border-green-500 focus:ring-1 focus:ring-green-500 text-gray-900 placeholder-gray-500 rounded px-3 py-2;
   }
 
   /* Text styles */
@@ -114,7 +115,7 @@
 
   /* Link styles */
   .link-primary {
-    @apply text-orange-600 hover:text-orange-700 hover:underline transition-colors duration-200;
+    @apply text-green-600 hover:text-green-700 hover:underline transition-colors duration-200;
   }
 
   .link-secondary {
