@@ -160,7 +160,7 @@ export function FeaturedCard({ item, type }: FeaturedCardProps) {
           </DialogTrigger>
           <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
             <DialogHeader>
-              <DialogTitle className="flex items-center gap-2">
+              <DialogTitle className="flex items-center gap-2 text-black">
                 {ruleOrPrompt.title}
                 <Button
                   variant="ghost"
@@ -180,54 +180,6 @@ export function FeaturedCard({ item, type }: FeaturedCardProps) {
             </div>
           </DialogContent>
         </Dialog>
-
-        <div className="flex items-center justify-between text-sm text-gray-500">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
-              <User className="h-4 w-4" />
-              <span>{ruleOrPrompt.author}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Heart className="h-4 w-4" />
-              <span>
-                {(ruleOrPrompt as Rule).likes || (ruleOrPrompt as Prompt).likes}
-              </span>
-            </div>
-            {type === "prompt" && (
-              <div className="flex items-center gap-1">
-                <Download className="h-4 w-4" />
-                <span>{(ruleOrPrompt as Prompt).downloads}</span>
-              </div>
-            )}
-          </div>
-
-          <div className="flex gap-2">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={handleCopyContent}
-              className="btn-ghost p-2"
-            >
-              <Copy className="h-4 w-4" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={handleLike}
-              className={`btn-ghost p-2 ${isLiked ? "text-red-500" : ""}`}
-            >
-              <Heart className={`h-4 w-4 ${isLiked ? "fill-current" : ""}`} />
-            </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={handleShare}
-              className="btn-ghost p-2"
-            >
-              <Share2 className="h-4 w-4" />
-            </Button>
-          </div>
-        </div>
       </div>
     );
   };
