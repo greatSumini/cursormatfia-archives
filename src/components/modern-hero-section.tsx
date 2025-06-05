@@ -4,6 +4,11 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
+import {
+  CATEGORY_RULES,
+  CATEGORY_PROMPTS,
+  CATEGORY_LIBRARIES,
+} from "@/constants/categories";
 
 export function ModernHeroSection() {
   const [searchValue, setSearchValue] = useState("");
@@ -31,15 +36,15 @@ export function ModernHeroSection() {
         {/* Stats */}
         <div className="grid grid-cols-3 gap-8 max-w-xl mx-auto text-center">
           <div>
-            <div className="text-sm text-gray-600">Rules</div>
+            <div className="text-sm text-gray-600">{CATEGORY_RULES}</div>
             <div className="text-2xl font-bold text-gray-900 mb-1">6개</div>
           </div>
           <div>
-            <div className="text-sm text-gray-600">프롬프트</div>
+            <div className="text-sm text-gray-600">{CATEGORY_PROMPTS}</div>
             <div className="text-2xl font-bold text-gray-900 mb-1">10개</div>
           </div>
           <div>
-            <div className="text-sm text-gray-600">Libraries</div>
+            <div className="text-sm text-gray-600">{CATEGORY_LIBRARIES}</div>
             <div className="text-2xl font-bold text-gray-900 mb-1">10개</div>
           </div>
         </div>

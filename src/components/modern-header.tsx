@@ -5,14 +5,19 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import {
+  CATEGORY_RULES,
+  CATEGORY_PROMPTS,
+  CATEGORY_LIBRARIES,
+} from "@/constants/categories";
 
 export function ModernHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navigationItems = [
-    { href: "#featured-rules", label: "Rules" },
-    { href: "#featured-prompts", label: "Prompts" },
-    { href: "#featured-libraries", label: "Libraries" },
+    { href: "#featured-rules", label: CATEGORY_RULES },
+    { href: "#featured-prompts", label: CATEGORY_PROMPTS },
+    { href: "#featured-libraries", label: CATEGORY_LIBRARIES },
   ];
 
   return (

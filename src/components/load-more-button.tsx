@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
+import { CATEGORY_RULES } from "@/constants/categories";
 
 interface LoadMoreButtonProps {
   onLoadMore: () => Promise<void>;
@@ -41,7 +42,7 @@ export function LoadMoreButton({ onLoadMore, hasMore }: LoadMoreButtonProps) {
             Loading more...
           </>
         ) : (
-          "Load More Rules"
+          `Load More ${CATEGORY_RULES}`
         )}
       </Button>
     </div>

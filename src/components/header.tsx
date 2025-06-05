@@ -9,6 +9,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Github, Menu, Moon } from "lucide-react";
+import {
+  CATEGORY_RULES,
+  CATEGORY_PROMPTS,
+  CATEGORY_LIBRARIES,
+} from "@/constants/categories";
 
 export function Header() {
   return (
@@ -30,7 +35,7 @@ export function Header() {
               href="/"
               className="text-gray-300 hover:text-white transition-colors duration-200"
             >
-              Rules
+              {CATEGORY_RULES}
             </Link>
             <Link
               href="/generate"
@@ -114,7 +119,7 @@ export function Header() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-gray-800 border-gray-700">
                   <DropdownMenuItem className="text-gray-300 hover:text-white hover:bg-gray-700">
-                    Rules
+                    {CATEGORY_RULES}
                   </DropdownMenuItem>
                   <DropdownMenuItem className="text-gray-300 hover:text-white hover:bg-gray-700">
                     Generate
