@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import MCPGuideModal from "./mcp-guide-modal";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
@@ -48,6 +49,7 @@ export function ModernHeader() {
 
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
+              <MCPGuideModal />
               {/* GitHub link */}
               <Link
                 href="https://github.com/cursormatfia"
